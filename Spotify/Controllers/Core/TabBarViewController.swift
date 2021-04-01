@@ -20,11 +20,15 @@ class TabBarViewController: UITabBarController {
         
         vc1.title = "Browse"
         vc2.title = "Search"
-        vc2.title = "Library"
+        vc3.title = "Library"
         
         let nav1 = UINavigationController(rootViewController: vc1)
-        let nav2 = UINavigationController(rootViewController: vc1)
-        let nav3 = UINavigationController(rootViewController: vc1)
+        let nav2 = UINavigationController(rootViewController: vc2)
+        let nav3 = UINavigationController(rootViewController: vc3)
+        
+        nav1.navigationBar.tintColor = .label
+        nav2.navigationBar.tintColor = .label
+        nav3.navigationBar.tintColor = .label
         
         nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
@@ -38,16 +42,4 @@ class TabBarViewController: UITabBarController {
         
         setViewControllers([nav1, nav2, nav3], animated: true)
     }
-    
- 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
